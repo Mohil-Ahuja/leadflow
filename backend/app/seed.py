@@ -58,11 +58,11 @@ def build_leads() -> list[SeedLead]:
         SeedLead(
             "Ananya Iyer", "Kestrel Wealth Partners", "+91 98200 41123", LeadStatus.PROPOSAL_SENT, 12,
             notes=[
-                (11, "Discovery call. 14 advisors, ~₹1,800 Cr AUM. Reviews happen in spreadsheets "
+                (11.27, "Discovery call. 14 advisors, ~₹1,800 Cr AUM. Reviews happen in spreadsheets "
                      "once a quarter, so clients slip through the cracks.", False),
-                (6, "Ran the demo for Ananya and her ops lead. They loved the portfolio drift alerts; "
+                (6.13, "Ran the demo for Ananya and her ops lead. They loved the portfolio drift alerts; "
                     "asked about SEBI RIA audit trails.", False),
-                (2, "Sent the Growth plan proposal with the audit-trail add-on. She will review it "
+                (2.31, "Sent the Growth plan proposal with the audit-trail add-on. She will review it "
                     "with the partners and call back.", True),
             ],
             follow_up=_later_today(16),
@@ -70,8 +70,8 @@ def build_leads() -> list[SeedLead]:
         SeedLead(
             "Rohan Mehta", "Banyan Family Office", "+91 99300 77810", LeadStatus.QUALIFIED, 20,
             notes=[
-                (19, "Intro via Kestrel. Single family office, very particular about data residency.", False),
-                (4, "Shared our India data-residency note. Rohan wants a call with our CTO before "
+                (19.22, "Intro via Kestrel. Single family office, very particular about data residency.", False),
+                (4.09, "Shared our India data-residency note. Rohan wants a call with our CTO before "
                     "going further.", True),
             ],
             follow_up=_earlier_today(),
@@ -79,17 +79,17 @@ def build_leads() -> list[SeedLead]:
         SeedLead(
             "Priya Nair", "Northstar Advisors", "+91 98450 12900", LeadStatus.CONTACTED, 9,
             notes=[
-                (8, "Cold outreach on LinkedIn, she replied asking for a short deck.", False),
-                (5, "Sent the deck. Promised to follow up on Tuesday.", True),
+                (8.35, "Cold outreach on LinkedIn, she replied asking for a short deck.", False),
+                (5.18, "Sent the deck. Promised to follow up on Tuesday.", True),
             ],
             follow_up=now - timedelta(days=2, hours=3),
         ),
         SeedLead(
             "Emily Chen", "Harbor & Pine Wealth", "+65 8123 4471", LeadStatus.PROPOSAL_SENT, 16,
             notes=[
-                (15, "Met at the Singapore wealth-tech meetup. Team of 30 advisors across two offices.", False),
-                (7, "Second demo with their head of advice. Main concern is migrating 6 years of client notes.", False),
-                (1, "Sent revised pricing with a free migration sprint. Decision expected this week.", True),
+                (15.26, "Met at the Singapore wealth-tech meetup. Team of 30 advisors across two offices.", False),
+                (7.04, "Second demo with their head of advice. Main concern is migrating 6 years of client notes.", False),
+                (1.40, "Sent revised pricing with a free migration sprint. Decision expected this week.", True),
             ],
             follow_up=_later_today(11),
         ),
@@ -101,33 +101,33 @@ def build_leads() -> list[SeedLead]:
         SeedLead(
             "Karthik Rao", "Indus Ridge Advisory", "+91 90080 55621", LeadStatus.QUALIFIED, 25,
             notes=[
-                (24, "Webinar attendee, booked a call straight after.", False),
-                (10, "Needs approval from the compliance head before a pilot.", False),
-                (3, "Compliance head is on leave. Agreed to reconnect once she is back.", True),
+                (24.29, "Webinar attendee, booked a call straight after.", False),
+                (10.15, "Needs approval from the compliance head before a pilot.", False),
+                (3.21, "Compliance head is on leave. Agreed to reconnect once she is back.", True),
             ],
             follow_up=now + timedelta(days=3),
         ),
         SeedLead(
             "Arjun Bose", None, "+91 98110 23457", LeadStatus.CONTACTED, 6,
             notes=[
-                (5, "Independent advisor, ~120 client families. Left a voicemail.", False),
-                (1, "Picked up this time. Wants to see the mobile app before committing to a demo.", True),
+                (5.33, "Independent advisor, ~120 client families. Left a voicemail.", False),
+                (1.11, "Picked up this time. Wants to see the mobile app before committing to a demo.", True),
             ],
             follow_up=now + timedelta(days=1),
         ),
         SeedLead(
             "Sofia Alvarez", "Lumen Capital", "+971 50 118 2290", LeadStatus.WON, 45,
             notes=[
-                (44, "Referral from an existing customer.", False),
-                (30, "Pilot with 5 advisors went live.", False),
-                (21, "Contract signed for all 18 advisors. Handed over to onboarding.", False),
+                (44.24, "Referral from an existing customer.", False),
+                (30.30, "Pilot with 5 advisors went live.", False),
+                (21.17, "Contract signed for all 18 advisors. Handed over to onboarding.", False),
             ],
         ),
         SeedLead(
             "Meera Kapoor", "Saffron Financial Planners", "+91 97690 44012", LeadStatus.LOST, 40,
             notes=[
-                (39, "Discovery call. Strong fit on paper.", False),
-                (18, "They decided to build in-house. Worth checking back next financial year.", False),
+                (39.12, "Discovery call. Strong fit on paper.", False),
+                (18.38, "They decided to build in-house. Worth checking back next financial year.", False),
             ],
         ),
         SeedLead("Vikram Shah", "Polaris Wealth Desk", "+91 98670 33018", LeadStatus.NEW, 0.02),
