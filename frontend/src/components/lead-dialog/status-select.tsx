@@ -36,7 +36,7 @@ export function StatusSelect({ value, onChange, disabled }: StatusSelectProps) {
         <Select.Content
           position="popper"
           sideOffset={6}
-          align="end"
+          align="start"
           className="anim-pop z-[60] min-w-[240px] overflow-hidden rounded-xl border border-line bg-surface p-1 shadow-pop"
         >
           <Select.Viewport>

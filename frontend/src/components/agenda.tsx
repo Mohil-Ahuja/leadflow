@@ -101,7 +101,7 @@ function TimeCell({ primary, secondary, tone }: { primary: string; secondary?: s
   return (
     <div
       className={clsx(
-        "tabular flex w-[72px] shrink-0 flex-col justify-center border-r px-2.5 text-right sm:w-[104px] sm:px-4",
+        "tabular flex w-[80px] shrink-0 flex-col justify-center whitespace-nowrap border-r px-2 text-right sm:w-[104px] sm:px-4",
         tone === "overdue" ? "border-overdue-line/60 bg-overdue-tint/60" : "border-due-line/70 bg-due-tint/50",
       )}
     >
