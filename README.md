@@ -1,5 +1,7 @@
 # LeadFlow
 
+[![CI](https://github.com/Mohil-Ahuja/leadflow/actions/workflows/ci.yml/badge.svg)](https://github.com/Mohil-Ahuja/leadflow/actions/workflows/ci.yml)
+
 A single-screen lead manager for a sales rep: see who to call today, log every conversation, and set the next follow-up without leaving the list.
 
 Built with **Next.js 15 + FastAPI** for the Pravar AI full-stack internship assignment.
@@ -89,7 +91,7 @@ python e2e/flow.py              # browser flow test (needs Playwright and both s
 
 - **Search by name** (and company): searched on the server, typed input is debounced, press `/` to focus
 - **Overdue follow-ups in red**: earlier days sit in their own *Overdue* group; today's that have passed turn red inside *Due today*
-- **Docker Compose** with Postgres, health checks and auto-seeding
+- **Docker Compose** with Postgres, health checks and auto-seeding. CI starts the whole stack on every push and tests it through the web app
 - **Seed script** with 10 leads and 20+ logged discussions (`python -m app.seed`)
 - **Filters**: status filter and search work together, with counts per stage
 
@@ -176,7 +178,7 @@ Unexpected exceptions are logged and returned as a generic `500` that doesn't ex
 As the brief encouraged, I built this with an AI coding assistant. To be clear about how:
 
 - **AI-assisted:** I set the brief and direction; the assistant proposed and wrote most of the design and code, the test cases, the seed data copy, the Dockerfiles and this README.
-- **How it was checked:** the backend tests (23) and frontend unit tests pass; type checks and lint are clean; and the main flows were run end to end in a real browser with Playwright: logging a note with a follow-up, changing status, adding a lead, search, filters and reloading to confirm changes are saved. The screenshots and the demo video come from those runs.
+- **How it was checked:** the backend tests (23) and frontend unit tests pass, and CI runs them on every push along with a Docker Compose smoke test; type checks and lint are clean; and the main flows were run end to end in a real browser with Playwright: logging a note with a follow-up, changing status, adding a lead, search, filters and reloading to confirm changes are saved. The screenshots and the demo video come from those runs.
 - I reviewed the output and can walk through and defend any part of it in a follow-up conversation.
 
 ## What I'd do next
@@ -184,4 +186,4 @@ As the brief encouraged, I built this with an AI coding assistant. To be clear a
 - Log in with a separate lead list for each rep
 - Alembic migrations, and pagination once the list grows
 - Browser notifications when a follow-up comes due
-- Playwright end-to-end tests in CI (GitHub Actions)
+- Run the Playwright browser flow in CI as well
