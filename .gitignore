@@ -1,0 +1,28 @@
+# Assignment brief and wireframes from the email (kept locally, not part of the app)
+guide.txt
+*-PravarAI.png
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.db
+
+# Node
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Env
+.env
+.env.local
+.env*.local
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
